@@ -2,6 +2,9 @@
 /* Server Only Methods */
 /*****************************************************************************/
 Meteor.methods({
+  removeAll: function (){
+    Aggregation.remove({});
+  }
   /*
    * Example:
    *

@@ -1,3 +1,26 @@
 <template name="Home">
-  <h1>Find me in app/client/templates/home/home</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        {{> MainBar}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        {{> Errors ags}}
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-8">
+            {{> Graph timeAgs}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Detail</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

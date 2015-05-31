@@ -1,31 +1,32 @@
 /*****************************************************************************/
-/* Home: Event Handlers */
+/* Errors: Event Handlers */
 /*****************************************************************************/
-Template.Home.events({
+Template.Errors.events({
 });
 
 /*****************************************************************************/
-/* Home: Helpers */
+/* Errors: Helpers */
 /*****************************************************************************/
-Template.Home.helpers({
-  ags: function(){
-    return Aggregation.find({type: 'message'});
+Template.Errors.helpers({
+  countAll: function(){
+    return this.count();
   },
-  timeAgs: function(){
-    return Aggregation.find({type: 'time'});
-  }
+  timeAg: function(){
+    return this && this.type == 'time';
+  },
+  eventsCount: function(){
+    return this && this.events.length;
+  },
 });
 
 /*****************************************************************************/
-/* Home: Lifecycle Hooks */
+/* Errors: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Home.created = function () {
+Template.Errors.created = function () {
 };
 
-Template.Home.rendered = function () {
-  Meteor.subscribe('aggregationTime');
-  Meteor.subscribe('aggregationMessage');
+Template.Errors.rendered = function () {
 };
 
-Template.Home.destroyed = function () {
+Template.Errors.destroyed = function () {
 };

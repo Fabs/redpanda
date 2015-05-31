@@ -1,0 +1,12 @@
+<template name="Errors">
+  <h2>Errors ({{countAll}})</h2>
+  <ul>
+    {{#each .}}
+      {{#if timeAg}}
+        <!--<li>{{type}}: <b>{{ interval }}</b>({{ group }}) - {{ eventsCount }}</li>-->
+      {{else}}
+        <li>{{type}}: <b>{{ message }}</b> - {{ eventsCount }}</li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</template>

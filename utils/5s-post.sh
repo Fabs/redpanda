@@ -1,0 +1,1 @@
+curl -v -H "Accept: application/json" -H "Content-type: application/json" -X POST -d ' {"message": "A static log message"}' http://dev.rh:3000/collect

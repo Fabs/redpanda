@@ -5,6 +5,12 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 iron:router
+http
+simple:rest
+mrt:moment
+underscore
+bootstrap
+twbs:bootstrap
+peernohell:c3

@@ -1,31 +1,23 @@
 /*****************************************************************************/
-/* Home: Event Handlers */
+/* Details: Event Handlers */
 /*****************************************************************************/
-Template.Home.events({
+Template.Details.events({
 });
 
 /*****************************************************************************/
-/* Home: Helpers */
+/* Details: Helpers */
 /*****************************************************************************/
-Template.Home.helpers({
-  ags: function(){
-    return Aggregation.find({type: 'message'});
-  },
-  timeAgs: function(){
-    return Aggregation.find({type: 'time'});
-  }
+Template.Details.helpers({
 });
 
 /*****************************************************************************/
-/* Home: Lifecycle Hooks */
+/* Details: Lifecycle Hooks */
 /*****************************************************************************/
-Template.Home.created = function () {
+Template.Details.created = function () {
 };
 
-Template.Home.rendered = function () {
-  Meteor.subscribe('aggregationTime');
-  Meteor.subscribe('aggregationMessage');
+Template.Details.rendered = function () {
 };
 
-Template.Home.destroyed = function () {
+Template.Details.destroyed = function () {
 };

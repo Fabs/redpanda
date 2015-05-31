@@ -1,0 +1,23 @@
+<template name="Graph">
+  <h2>Table (Each: {{currentInterval}})</h2>
+  <span>
+    Select Interval:
+    <a data-interval="5">5</a>
+    <a data-interval="10">10</a>
+    <a data-interval="60">60</a>
+  </span>
+  <div class="chart"></div>
+  <br/>
+  <table>
+    <tr>
+      {{#each interval currentInterval 10}}
+        <th>{{intervalFormat group interval}}</th>
+      {{/each}}
+    </tr>
+    <tr>
+      {{#each interval currentInterval 10}}
+        <td>{{eventsCount}}</td>
+      {{/each}}
+    </tr>
+  </table>
+</template>
